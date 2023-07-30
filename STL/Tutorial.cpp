@@ -59,3 +59,27 @@ int main(){
     return 0;
 }
 
+////////////////////////////////////////////////////////////////////
+//LESSON 2.2 - PAIR
+//pair is a container that can be used to bind
+//together a group of values
+////////////////////////////////////////////////////////////////////
+//EXAMPLE 2
+
+void explainPair(){
+    pair<int,int> p = {1,3};
+    cout<<"First pair is {1,3}"<<endl;
+    cout<<"First value is: "<<p.first<<" Second value is: "<<p.second<<endl;
+    cout<<"Second pair is {1,{3,4}}"<<endl;
+    pair<int,pair<int,int>> p1 = {1,{3,4}};
+    cout<<"First value is: "<<p1.first<<" First value of second pair is: "<<p1.second.first<<" Second value of second pair is: "<<p1.second.second<<endl;
+    cout<<"Third pair is {{1,2},{2,5},{5,1}}"<<endl;
+    pair<int,int> arr[] = {{1,2},{2,5},{5,1}};
+    cout<<"Iterating over the array"<<endl;
+    cout<<arr[0].first<<endl;
+    cout<<arr[0].second<<endl;
+    cout<<arr[1].first<<endl;
+    cout<<arr[1].second<<endl;
+    cout<<arr[2].first<<endl;
+    cout<<arr[2].second<<endl;
+}
