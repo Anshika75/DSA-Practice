@@ -63,6 +63,8 @@ int main(){
 //LESSON 2.2 - PAIR
 //pair is a container that can be used to bind
 //together a group of values
+//Nested pairs can be used to bind together
+//multiple values
 ////////////////////////////////////////////////////////////////////
 //EXAMPLE 2
 
@@ -82,4 +84,60 @@ void explainPair(){
     cout<<arr[1].second<<endl;
     cout<<arr[2].first<<endl;
     cout<<arr[2].second<<endl;
+}
+
+//LESSON 2.3 - VECTOR
+//vector is a sequence container and also known
+//as Dynamic Array or Array List
+//Its size can grow and shrink dynamically
+//in accordance with the elements that are
+//inserted or deleted from it
+//It is similar to an array with the exception
+//that it grows its size automatically as new
+//elements are inserted in it
+//Elements can be inserted at the end, in the
+//middle or in the beginning
+//It provides random access to its elements
+//push_back() -> adds an element at the end
+//emplace_back() -> constructs the element in-place
+//at the end, faster than push_back()
+//in push_back() curly braces are used to 
+//initialize the element in pair
+//in emplace_back() normal brackets are used
+//to initialize the element in pair
+//pop_back() -> removes the last element
+//insert() -> inserts new elements before the element
+//at the specified position
+//we can increase the size even after the vector is defined
+//iterator is a pointer that points to a particular element in the vector
+//begin() returns an iterator pointing to the first element of the vector
+//end() returns an iterator pointing to the last element of the vector
+//initially it will print the memory address of the first element
+//to print the value of the first element we use *it
+
+//EXAMPLE 3
+
+void explainVector(){
+    vector<int> v;
+    cout<<"Initial size of vector is: "<<v.size()<<endl;
+    v.push_back(1);
+    cout<<"Size after inserting 1 is: "<<v.size()<<endl;
+    v.emplace_back(2);
+    cout<<"Size after inserting 2 is: "<<v.size()<<endl;
+    vector<pair<int,int>> vec;
+    vec.push_back({1,2});
+    vec.emplace_back(2,3);
+    cout<<"Size after inserting pair is: "<<vec.size()<<endl;
+    vector<int> v1(5,100);
+    //container containing 5 elements with value 100 is defined
+    vector<int> v2(5);
+    //container containing 5 elements with value 0 or any other garbage value is defined
+    vector<int> v3(5, 20);
+    //container containing 5 elements with value 20 is defined
+    vector<int> v4(v3);
+    //container containing elements of v1 is copied to v2
+    vector<int>::iterator it = v.begin();
+    it++;
+    cout<<*(it)<<" ";
+
 }
