@@ -11,7 +11,7 @@ int main()
     if (q.empty()) {
         cout << "Enter " << 1 << " element: ";
         cin >> element;
-        q.push(element);  // Inserting the element 10
+        q.push(element); 
         size - 1;
     }
     for(i=0; i<size-1; i++){
